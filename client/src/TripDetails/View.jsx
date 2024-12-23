@@ -75,7 +75,7 @@ function View() {
     const email = localStorage.getItem("Email");
     try {
         
-      const response= await axios.post("https://ai-travelplanner-p721.onrender.com/wishlist/add", {
+      const response= await axios.post("https://budgetquest-hlns.onrender.com/wishlist/add", {
             email,
             carttrip: [place], 
           })
@@ -303,7 +303,7 @@ function View() {
                         {weather && (
                           <div className="mb-4 flex items-center gap-4">
                             <img
-                              src={`https://openweathermap.org/img/wn/${weather.icon}.png`}
+                              src={`://openweathermap.org/img/wn/${weather.icon}.png`}
                               alt={weather.condition}
                               className="w-8 h-8"
                             />

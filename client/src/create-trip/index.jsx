@@ -100,7 +100,7 @@ const navigate=useNavigate();
       };
 
   
-      const response = await axios.post('https://ai-travelplanner-p721.onrender.com/gemini', payload);
+      const response = await axios.post('https://budgetquest-hlns.onrender.com/gemini', payload);
 
       console.log('API Response:', response.data);
       

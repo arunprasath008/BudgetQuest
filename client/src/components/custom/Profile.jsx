@@ -45,7 +45,7 @@ export default function Profile() {
     const fetchWishlist = async () => {
       try {
         if (email) {
-          const response = await axios.get(`https://ai-travelplanner-p721.onrender.com/${email}`);
+          const response = await axios.get(`https://budgetquest-hlns.onrender.com/${email}`);
           setPlanHistory(response.data.wishlist || []);
         } else {
           console.error("Email is not available in localStorage.");
@@ -61,7 +61,7 @@ export default function Profile() {
   
   useEffect(() => {
     const generateProfileLink = () => {
-      setProfileLink(`https://ai-travelplanner-p721.onrender.com/${email}`);
+      setProfileLink(`https://budgetquest-hlns.onrender.com/${email}`);
     };
     generateProfileLink();
   }, [email]);
@@ -88,7 +88,7 @@ export default function Profile() {
 
   const handleDelete = async (placeName) => {
     try {
-      const response = await axios.delete("https://ai-travelplanner-p721.onrender.com/delete", {
+      const response = await axios.delete("https://budgetquest-hlns.onrender.com/delete", {
         data: { email: email, placeName: placeName },
       });
 
@@ -103,7 +103,7 @@ export default function Profile() {
 
   const handleComplete = async (placeName) => {
     try {
-      const response = await axios.patch("https://ai-travelplanner-p721.onrender.com/complete", {
+      const response = await axios.patch("https://budgetquest-hlns.onrender.com/complete", {
         email: email,
         placeName: placeName,
       });
